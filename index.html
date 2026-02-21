@@ -1,287 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abhilash | Developer Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polepaka Likhith | Portfolio</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
 
-  <style>
-    :root {
-      --bg: #0b0b0e;
-      --card: #14141a;
-      --text: #ffffff;
-      --muted: #9ca3af;
-      --accent: #7c7cff;
+/* ================= ROOT VARIABLES ================= */
+:root{
+    --bg:#0b0f19;
+    --card:rgba(255,255,255,0.05);
+    --primary:#7c3aed;
+    --secondary:#06b6d4;
+    --text:#e2e8f0;
+    --muted:#94a3b8;
+}
+
+/* ================= GLOBAL ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+section{
+    padding:100px 10%;
+}
+
+h2{
+    font-size:30px;
+    margin-bottom:40px;
+    position:relative;
+}
+
+/* Accent underline */
+h2::after{
+    content:"";
+    width:60px;
+    height:4px;
+    background:linear-gradient(to right,var(--primary),var(--secondary));
+    position:absolute;
+    bottom:-10px;
+    left:0;
+    border-radius:5px;
+}
+
+/* ================= NAV ================= */
+header{
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.4);
+    padding:20px 10%;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-weight:600;
+    font-size:20px;
+    letter-spacing:1px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:var(--text);
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:var(--primary);
+}
+
+/* ================= HERO ================= */
+#home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:90vh;
+    gap:50px;
+}
+
+.hero-text{
+    flex:1;
+    animation:fadeUp 1s ease forwards;
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text span{
+    background:linear-gradient(to right,var(--primary),var(--secondary));
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero-text p{
+    color:var(--muted);
+    max-width:500px;
+}
+
+.hero-panel{
+    flex:1;
+    height:300px;
+    border-radius:20px;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    filter:blur(100px);
+    opacity:0.5;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    background:linear-gradient(to right,var(--primary),var(--secondary));
+    color:white;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* ================= GLASS CARD ================= */
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:15px;
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+}
+
+/* ================= SKILLS ================= */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+}
+
+/* ================= PROJECTS ================= */
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+/* ================= TIMELINE (EDUCATION) ================= */
+.timeline{
+    border-left:3px solid var(--primary);
+    padding-left:20px;
+}
+
+.timeline-item{
+    margin-bottom:30px;
+}
+
+/* ================= CONTACT ================= */
+#contact{
+    text-align:center;
+}
+
+#contact p{
+    color:var(--muted);
+    margin:10px 0;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+
+    #home{
+        flex-direction:column;
+        text-align:center;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+    .hero-panel{
+        display:none;
     }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
+    h2::after{
+        left:50%;
+        transform:translateX(-50%);
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    h2{
+        text-align:center;
     }
 
-    section {
-      padding: 120px 8%;
+    section{
+        padding:80px 6%;
     }
+}
 
-    /* NAV */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(11,11,14,0.6);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-    }
-
-    nav h1 {
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-
-    nav a {
-      margin-left: 24px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    nav a:hover {
-      color: var(--text);
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-content {
-      max-width: 700px;
-      animation: fadeUp 1s ease forwards;
-    }
-
-    .hero h2 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700;
-    }
-
-    .hero h2 span {
-      color: var(--accent);
-    }
-
-    .hero p {
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 40px;
-      padding: 14px 32px;
-      background: var(--accent);
-      color: #000;
-      border-radius: 12px;
-      font-weight: 600;
-      transition: transform 0.3s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-4px);
-    }
-
-    /* ABOUT */
-    .about {
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .about h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .about p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    /* PROJECTS */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 50px;
-    }
-
-    .project-card {
-      background: var(--card);
-      padding: 24px;
-      border-radius: 16px;
-      border: 1px solid transparent;
-      transition: all 0.4s ease;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .project-card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .project-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-8px);
-    }
-
-    .project-card h4 {
-      margin-bottom: 10px;
-    }
-
-    .project-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* CONTACT */
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      color: var(--muted);
-      margin-top: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav a {
-        margin-left: 16px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
+<!-- ================= NAVIGATION ================= -->
 <header>
-  <nav>
-    <h1>Abhilash</h1>
-    <div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<nav>
+<div class="logo">Abhilash Peggapuram</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2>Building <span>modern</span> web experiences</h2>
-    <p>
-      I’m a developer focused on clean UI, smooth animations,
-      and scalable web applications.
-    </p>
-    <a href="#projects" class="btn">View Projects</a>
-  </div>
+<!-- ================= HERO ================= -->
+<section id="home">
+<div class="hero-text">
+<h1>Hello, I'm <span>ABHILASH</span></h1>
+<p>Computer Science student building clean, modern, and professional web experiences with strong fundamentals in programming and system design.</p>
+<a href="#projects" class="btn">Explore My Work</a>
+</div>
+<div class="hero-panel"></div>
 </section>
 
+<!-- ================= ABOUT ================= -->
 <section id="about">
-  <div class="about">
-    <h3>About Me</h3>
-    <p>
-      I’m a full-stack developer with strong fundamentals in web technologies.
-      I enjoy building fast, accessible, and visually polished applications
-      with attention to detail and performance.
-    </p>
-  </div>
+<h2>About Me</h2>
+<div class="card">
+<p>
+Passionate developer focused on structured coding, UI clarity, and performance. 
+I aim to build solutions that are scalable, minimal, and impactful.
+</p>
+</div>
 </section>
 
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills-grid">
+<div class="card">HTML & CSS</div>
+<div class="card">Java</div>
+<div class="card">DBMS</div>
+<div class="card">Data Structures</div>
+<div class="card">Problem Solving</div>
+<div class="card">Team Collaboration</div>
+</div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
 <section id="projects">
-  <h3>Projects</h3>
-
-  <div class="projects-grid">
-    <div class="project-card">
-      <h4>Secure Attendance System</h4>
-      <p>Proxy-free attendance using time-bound authentication.</p>
-    </div>
-
-    <div class="project-card">
-      <h4>Admin Dashboard</h4>
-      <p>Clean analytics dashboard with role-based access.</p>
-    </div>
-
-    <div class="project-card">
-      <h4>Realtime Chat App</h4>
-      <p>Realtime messaging with notifications and Firebase.</p>
-    </div>
-  </div>
+<h2>Projects</h2>
+<div class="projects-grid">
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Responsive premium personal portfolio built using pure HTML & CSS.</p>
+</div>
+<div class="card">
+<h3>Student Management System</h3>
+<p>Java-based application to manage student records efficiently.</p>
+</div>
+<div class="card">
+<h3>3D Product Design</h3>
+<p>Academic project demonstrating product modeling and presentation.</p>
+</div>
+</div>
 </section>
 
-<section id="contact" class="contact">
-  <h3>Contact</h3>
-  <p>Email: abhilash@example.com</p>
-  <p>Open for internships & developer roles</p>
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+<h2>Education</h2>
+<div class="timeline">
+<div class="timeline-item">
+<h3>B.Tech in Computer Science</h3>
+<p>University Name (2022 – 2026)</p>
+</div>
+</div>
 </section>
 
-<footer>
-  © 2025 Abhilash. All rights reserved.
-</footer>
-
-<script>
-  const cards = document.querySelectorAll('.project-card');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  cards.forEach(card => observer.observe(card));
-</script>
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: abhilash@example.com</p>
+<p>LinkedIn: linkedin.com/in/yourprofile</p>
+<p>Phone: +91 XXXXX XXXXX</p>
+</section>
 
 </body>
 </html>
