@@ -2,120 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhilash | Full Stack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhilash | Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="container nav-content">
-      <h1 class="logo">Abhilash</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <h1 class="logo">Abhilash Peggapuram</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <h2>Hi, I'm <span>Abhilash</span></h2>
-      <h3>Full Stack Developer</h3>
-      <p>
-        I design and build secure, scalable, and user-centric web applications.
-        Passionate about backend logic, clean UI, and real-world problem solving.
-      </p>
-      <a href="#projects" class="btn">View Projects</a>
-    </div>
+    <h2 class="fade-in">Hi, I'm <span>Abhilash</span></h2>
+    <h3 class="slide-in">Full Stack Developer</h3>
+    <p class="fade-in delay">
+      I build scalable, secure, and performance-driven web applications
+      with clean code and modern technologies.
+    </p>
+    <button onclick="scrollToSection('projects')" class="btn pop-in">
+      View Projects
+    </button>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p>
-        I'm a B.Tech student at KITSW and a Full Stack Developer with hands-on
-        experience in building authentication systems, dashboards, APIs,
-        and mobile applications.
-      </p>
-      <p>
-        I focus on writing clean code, following best practices, and building
-        solutions that solve real problems.
-      </p>
-    </div>
+  <section id="about" class="section hidden">
+    <h2>About Me</h2>
+    <p>
+      I'm a B.Tech student at KITSW and a full-stack developer experienced in
+      authentication systems, dashboards, APIs, and mobile apps.
+    </p>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section gray">
-    <div class="container">
-      <h2 class="section-title">Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">HTML / CSS / JavaScript</div>
-        <div class="skill">React / React Native</div>
-        <div class="skill">Node.js / Express</div>
-        <div class="skill">PHP / CodeIgniter</div>
-        <div class="skill">MySQL / MongoDB</div>
-        <div class="skill">Firebase / REST APIs</div>
-        <div class="skill">Git & GitHub</div>
-        <div class="skill">DSA & Problem Solving</div>
-      </div>
+  <section id="skills" class="section gray hidden">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">HTML, CSS, JavaScript</div>
+      <div class="card">React, React Native</div>
+      <div class="card">Node.js, Express</div>
+      <div class="card">PHP, CodeIgniter</div>
+      <div class="card">MySQL, MongoDB</div>
+      <div class="card">Git, GitHub</div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
+  <section id="projects" class="section hidden">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="project-card">
+        <h3>Secure Attendance System</h3>
+        <p>
+          Anti-proxy attendance system using authentication,
+          session control, and access restrictions.
+        </p>
+      </div>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Secure Attendance System</h3>
-          <p>
-            Web-based attendance system to prevent proxy attendance using
-            authentication, session handling, and controlled network access.
-          </p>
-          <span>HTML • CSS • JS • PHP • MySQL</span>
-        </div>
+      <div class="project-card">
+        <h3>Student Dashboard</h3>
+        <p>
+          Role-based login system with admin and student dashboards.
+        </p>
+      </div>
 
-        <div class="project-card">
-          <h3>Student Internship Dashboard</h3>
-          <p>
-            Role-based login system with admin dashboard, student tracking,
-            and secure authentication.
-          </p>
-          <span>PHP • MySQL • MVC</span>
-        </div>
-
-        <div class="project-card">
-          <h3>React Native Chat App</h3>
-          <p>
-            Real-time chat application with Firebase Cloud Messaging,
-            push notifications, and native Android integration.
-          </p>
-          <span>React Native • Firebase</span>
-        </div>
+      <div class="project-card">
+        <h3>React Native Chat App</h3>
+        <p>
+          Real-time chat application with Firebase notifications.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section gray">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p>Email: abhilash@example.com</p>
-      <p>GitHub: github.com/Abhilash464</p>
-      <p>College: KITSW</p>
-    </div>
+  <section id="contact" class="section gray hidden">
+    <h2>Contact</h2>
+    <p>Email: b23cs046@kitsw.ac.in</p>
+    <p>GitHub: github.com/Abhilash464</p>
+    <p>College: KITSW</p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 Abhilash | Full Stack Developer</p>
+    <p>© 2025 Abhilash | Developer Portfolio</p>
   </footer>
 
   <script src="script.js"></script>
