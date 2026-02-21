@@ -3,96 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abhilash | Developer Portfolio</title>
+  <title>Abhilash | Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <h1 class="logo">Abhilash Peggapuram</h1>
-    <nav>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-left">Abhilash</div>
+    <div class="nav-right">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <h2 class="fade-in">Hi, I'm <span>Abhilash</span></h2>
-    <h3 class="slide-in">Full Stack Developer</h3>
-    <p class="fade-in delay">
-      I build scalable, secure, and performance-driven web applications
-      with clean code and modern technologies.
+    <h1 class="reveal">Full Stack Developer</h1>
+    <p class="reveal delay">
+      I build scalable, secure, and performance-focused web applications
+      with clean architecture and smooth user experiences.
     </p>
-    <button onclick="scrollToSection('projects')" class="btn pop-in">
-      View Projects
+    <button onclick="scrollToId('projects')" class="reveal delay2">
+      View Work
     </button>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section hidden">
-    <h2>About Me</h2>
+  <section id="about" class="section fade">
+    <h2>About</h2>
     <p>
-      I'm a B.Tech student at KITSW and a full-stack developer experienced in
-      authentication systems, dashboards, APIs, and mobile apps.
+      I’m a B.Tech student at KITSW and a full-stack developer with experience
+      in authentication systems, dashboards, APIs, and mobile applications.
+      I focus on writing maintainable, production-ready code.
     </p>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section gray hidden">
+  <section id="skills" class="section fade">
     <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">HTML, CSS, JavaScript</div>
-      <div class="card">React, React Native</div>
-      <div class="card">Node.js, Express</div>
-      <div class="card">PHP, CodeIgniter</div>
-      <div class="card">MySQL, MongoDB</div>
-      <div class="card">Git, GitHub</div>
+    <div class="skills">
+      <span>HTML / CSS / JavaScript</span>
+      <span>React / React Native</span>
+      <span>Node.js / Express</span>
+      <span>PHP / CodeIgniter</span>
+      <span>MySQL / MongoDB</span>
+      <span>Git / GitHub</span>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section hidden">
+  <section id="projects" class="section fade">
     <h2>Projects</h2>
-    <div class="grid">
-      <div class="project-card">
+
+    <div class="projects">
+      <div class="project">
         <h3>Secure Attendance System</h3>
         <p>
-          Anti-proxy attendance system using authentication,
-          session control, and access restrictions.
+          Anti-proxy attendance platform using authentication,
+          access restrictions, and session control.
         </p>
       </div>
 
-      <div class="project-card">
+      <div class="project">
         <h3>Student Dashboard</h3>
         <p>
-          Role-based login system with admin and student dashboards.
+          Role-based login system with admin and student dashboards,
+          built with secure backend logic.
         </p>
       </div>
 
-      <div class="project-card">
+      <div class="project">
         <h3>React Native Chat App</h3>
         <p>
-          Real-time chat application with Firebase notifications.
+          Real-time chat application with Firebase notifications
+          and native Android integration.
         </p>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section gray hidden">
+  <section id="contact" class="section fade">
     <h2>Contact</h2>
-    <p>Email: b23cs046@kitsw.ac.in</p>
+    <p>Email: abhilash@example.com</p>
     <p>GitHub: github.com/Abhilash464</p>
     <p>College: KITSW</p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Abhilash | Developer Portfolio</p>
+    © 2025 Abhilash — Developer Portfolio
   </footer>
 
   <script src="script.js"></script>

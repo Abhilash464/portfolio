@@ -1,9 +1,8 @@
-function scrollToSection(id) {
+function scrollToId(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// Reveal sections on scroll
-const hiddenSections = document.querySelectorAll(".hidden");
+const sections = document.querySelectorAll(".fade");
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -11,6 +10,6 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add("show");
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.25 });
 
-hiddenSections.forEach(section => observer.observe(section));
+sections.forEach(section => observer.observe(section));
